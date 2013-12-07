@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+    <div class="thumbnail">
+        <img ng-src="{{item.image}}" alt="{{item.name}}" class="thumb">
+    </div>
+    <div class="panel-heading">
+        <h4>
+            {{item.name}}
+            <small class="pull-right hidden-xs">
+                Categoria:
+                <a href="#/category/{{item.category}}">{{item.category}}</a>
+            </small>
+        </h4>
+        <h5 class="visible-xs">
+            Categoria:
+            <a href="#/category/{{item.category}}">{{item.category}}</a>
+        </h5>
+    </div>
+    <div class="panel-body">
+        <h4>Descrição:</h4>
+        <p class="col-mg-12">{{item.description}}</p>
+        <ul class="list-group">
+            <li class="list-group-item active">
+                Ingredientes:
+            </li>
+            <li ng-repeat="ingredient in item.ingredients" class="list-group-item">
+                <small>{{ingredient.quantity}} {{ingredient.unity}} de</small>&nbsp;{{ingredient.name}}</li>
+            <li class="list-group-item active">
+                Modo de preparo:
+            </li>
+            <li ng-repeat="step in item.steps" class="list-group-item">
+                <small>{{$index + 1}}&deg; - {{step.description}}</small>
+            </li>
+        </ul>
+    </div>
+</div>
