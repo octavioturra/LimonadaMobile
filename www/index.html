@@ -14,21 +14,12 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="styles/d659df73.rsc.css"/>
+    <link rel="stylesheet" href="styles/e791ce3a.rsc.css"/>
 
-    <link rel="stylesheet" href="styles/ba8371df.main.css"/>
+    <link rel="stylesheet" href="styles/fd81d4ca.main.css"/>
 </head>
 
 <body ng-app="limonadaApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
     <div ch-subscribe="app.ready">
         <div class="splashscreen" ng-hide="!!data.loaded===true">
             <span class="biggest">
@@ -58,21 +49,21 @@
     <!-- Add your site or application content here -->
     <header class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="NavbarCtrl">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" snap-toggle="left">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="/" class="navbar-brand">
-                <span class="fa fa-lemon-o"></span>
+            <a class="navbar-toggle" snap-toggle="left" href="javascript:void()">
+                <span class="fa fa-bars"></span>
+            </a>
+            <a href="#/" class="navbar-brand">
+                <strong><span class="fa fa-lemon-o"></span></strong>
                 &nbsp; Limonada
             </a>
         </div>
         <div id="header-bar">
             <ul class="nav navbar-nav pull-right hidden-xs">
                 <li class="dropdown">
-                    <a href="" snap-toggle="left">Menu</a>
+                    <a href="javascript:void()" snap-toggle="left">
+						<span class="fa fa-bars"></span>&nbsp;
+						Menu
+					</a>
                 </li>
             </ul>
         </div>
@@ -83,18 +74,21 @@
         <div snap-drawer="">
             <div ng-controller="CategoryCtrl">
                 <ul class="list-group">
-                    <li class="list-group-item active">Categorias</li>
-                    <li class="list-group-item">
-                        <a href="#/">todos</a>
+                    <li class="list-group-item active"><span class="fa fa-tags"></span>&nbsp;Categorias</li>
+                    <li class="list-group-item categories">
+                        <a href="#/"><span class="fa fa-globe"></span>&nbsp;todos</a>
                     </li>
-                    <li ng-repeat="category in categories" class="list-group-item">
-                        <a href="#/category/{{category}}">{{category}}</a>
+                    <li ng-repeat="category in categories" class="list-group-item categories">
+                        <a href="#/category/{{category}}"><span class="fa fa-tag"></span>&nbsp;{{category}}</a>
                     </li>
+					<li class="list-group-item active"></li>
+					<li class="list-group-item">
+						<a href="#/about"><span class="fa fa-info-circle"></span>&nbsp;Sobre</a>
+					</li>
                 </ul>
             </div>
         </div>
-        <div snap-content="" snap-options="snapOpts" id="content">
-            <div ng-view=""></div>
+        <div snap-content="" snap-options="snapOpts" id="content" ng-view="">
         </div>
     </div>
 
@@ -124,17 +118,17 @@
 
     <script src="phonegap.js"></script>
 
-    <script src="scripts/e4e4d0c0.plugins.js"></script>
+    <script src="scripts/3233641e.plugins.js"></script>
 
 
     <script src="scripts/27e13782.modules.js"></script>
 
 
-    <script src="scripts/03f8e367.utils.js"></script>
+    <script src="scripts/3c770046.utils.js"></script>
 
     <script src="scripts/4da82e93.channeldata.js"></script>
 
-    <script src="scripts/1de39cb9.app.js"></script>
+    <script src="scripts/c953db52.app.js"></script>
 </body>
 
 </html>
